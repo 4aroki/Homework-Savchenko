@@ -1,26 +1,21 @@
 ﻿//(не обязательная): Задайте строку, состоящую из слов, разделенных пробелами. Сформировать строку, в которой слова расположены в обратном порядке. В полученной строке слова должны быть также разделены пробелами.
 
-    static void Main()
-    {
-        Console.WriteLine("Введите строку из слов, разделенных пробелами:");
-        string inputString = Console.ReadLine();
+string ReverseWords(string input)
+{
 
-        string reversedString = ReverseWords(inputString);
+    // Разделение строки на слова
+    string[] words = input.Split(' ');
+    // Обращение порядка слов
+    Array.Reverse(words);
+    // Соединение слов обратно в строку с пробелами
+    return string.Join(" ", words);
 
-        Console.WriteLine("Результат: " + reversedString);
-    }
+}
 
-    static string ReverseWords(string input)
-    {
-        // Разделение строки на слова
-        string[] words = input.Split(' ');
 
-        // Обратный порядок слов
-        Array.Reverse(words);
+Console.WriteLine("Введите строку из слов, разделенных пробелами:");
+string inputString = Console.ReadLine();
 
-        // Формирование строки с обратным порядком слов
-        string reversedString = string.Join(" ", words);
+string reversedString = ReverseWords(inputString);
 
-        return reversedString;
-    }
-
+Console.WriteLine("Результат: " + reversedString);
