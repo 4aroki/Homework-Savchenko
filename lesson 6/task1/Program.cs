@@ -6,7 +6,7 @@ char[,] charArray = {
     { 'G', 'H', 'I' }
 };
 
-static string GetStringFromCharArray(char[,] charArray)
+string GetStringFromCharArray(char[,] charArray)
 {
     int rows = charArray.GetLength(0);
     int cols = charArray.GetLength(1);
@@ -25,11 +25,6 @@ static string GetStringFromCharArray(char[,] charArray)
     return resultString;
 }
 
-static void Main()
-{
     string resultString = GetStringFromCharArray(charArray);
     Console.WriteLine("Строка из двумерного массива символов: " + resultString);
 
-    
-    Console.ReadLine();
-}
